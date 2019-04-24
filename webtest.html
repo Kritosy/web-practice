@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+	<script>
+		document.write("hello world")
+	</script><br/>
+	<script src="http://how2j.cn/study/hello.js"></script><br>
+<button onClick="document.getElementById('1').style.display='none'">close</button>
+<button onClick="document.getElementById('1').style.display='block'">open</button>
+<p id = "1"> this is pig</p><br>
+<script>
+	var y = 20; 
+	document.write("x+x="+(y+y));
+</script><br>
+<script>
+	var x;
+
+	document.write("声明了但是未赋值的时候，类型是：" + typeof x);
+	document.write("<br>");
+	x = 5;
+	document.write("赋值为"+x+"之后，类型是："+ typeof x);
+	document.write("<br>");
+	x = 5.1;
+	document.write("赋值为"+x+"之后，类型是："+ typeof x);
+	document.write("<br>");
+	x= true;
+	document.write("赋值为"+x+"之后，类型是"+ typeof x);
+	document.write("<br>");
+	x= hello;
+	document.write("赋值为"+x+"之后，类型是"+ typeof x);	
+</script><br>
+	<script>
+		var a1 = 10;
+		a2 = a1.toString();
+		document.write("给"+a1+"应用一个toString方法之后，类型是："+(typeof a2));
+	</script><br>
+	<script>
+		function println(message){
+			document.write(message);
+		}
+		println("第一个message");
+		println("<br>");
+		println("第二个message");
+	</script><br>
+	<script>
+		function get(){
+			var n1 = document.getElementById("num1").value;
+			var n2 = document.getElementById("num2").value;
+			var n3 = Number(n1)+Number(n2);
+			document.getElementById("result").value = n3;
+		}
+	</script>
+<body>
+	<input id="num1" type="number" value="1">+<input id="num2" type="number" value="2"> = <input id="result" type="text">  <input type="button" value="计算" onClick="get()"><br>
+	<script>
+		function put(){
+		var  add1 = document.getElementById("add").value;
+		var  comname1= document.getElementById("comname").value;
+		var  money1= document.getElementById("money").value;
+		var  uni1= document.getElementById("uni").value;
+		var  typ1= document.getElementById("typ").value;
+		var  boss1= document.getElementById("boss").value;
+		var  product1= document.getElementById("product").value;
+		document.getElementById("res").value = (add1+"最大"+typ1+comname1+"倒闭了，王八蛋板"+boss1+"吃喝嫖赌，欠下了"+money1+"个亿，带着他的小姨子跑了!我们没有办法，拿着"+product1+"抵工资!原价都是一"+uni1+"多，两"+uni1+"多，三"+uni1+"多的"+product1+"，现在全部只卖二十块，统统只要二十块!"+boss1+"王八蛋，你不是人!我们辛辛苦苦给你干了大半年，你不发工资，你还我血汗钱，还我血汗钱!");
+		}
+	</script>
+	地名：<input id="add" type="text" value="浙江"> 公司类型<input id="typ" type="text" value="皮革厂"><br>
+	公司名称<input id="comname" type="text" value="江南皮革厂"> 老板姓名<input id="boss" type="text" value="黄鹤"><br>
+	money<input id="money" type="text" value="3.5">产品<input id="product" type="text" value="钱包"><br>
+	价格计量单位<input id="uni" type="text" value="万"><br>
+	<textarea id="res" style="margin: 20px 0px 0px; height: 135px; width: 872px;"></textarea>
+	<input type="button" value="生成" onClick="put()"><br>
+	<script>
+		function tan(){
+			alert("这就是js里面alert的作用");
+		}
+	</script>
+	<input type="button" value="点击一下" onClick="tan()"><br>
+
+ </body>
+</html>
+ 
