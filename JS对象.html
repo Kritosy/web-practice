@@ -64,7 +64,46 @@
 	document.write("<br>");
 	document.write('通过indexOf（"a"）获取子字符"a"第一次出现的位置'+ y1.indexOf("a"));
 	document.write("<br>");
-	document.write('通过indexOf ("a")获取子字符"a" 第一次出现的位置 '+y1.indexOf ("a"));
+	document.write('通过LastIndexOf（"a"）获取子字符"a"最后出现的位置'+ y1.lastIndexOf("a"));
+</script><br>
+<script>//比较字符串是否相同 输出 0 1 -1
+	var y2 = new String("hello");
+	var y3 = new String("hello");
+	var y4 = new String("llohe");
+	document.write(y2.localeCompare(y3));
+	document.write("<br>");
+	document.write(y2.localeCompare(y4));
+</script><br>
+<script>//截取字符串 左闭右开->（0，3）取的到0，取不到3
+	var y5 = new String("hello javascript");
+	document.write(y5.substring(2,7));
+</script><br>
+<script>//根据分隔符，把字符串转换为数组
+	var y6 = new String("hello this is java script");
+	var y7 = y6.split(" ");
+	var y8 = y6.split(" ",4);
+	document.write(y7);
+	document.write("<br>");
+	document.write(y8);
+</script><br>
+<script>
+	var y9 = new String("hello javascript");
+	document.write(y9.replace("a","o"));
+</script><br>
+<script>//如果定义了变量来获取值，那么在替换函数中不用引号！！！！
+	function rep(){
+		var z1 = document.getElementById("origin").value;
+		var z2 = document.getElementById("find").value;
+		var z3 = document.getElementById("repto").value;
+		var z4 = new RegExp(z2,"g");
+		var z5 = z1.replace(z4,z3);
+		document.getElementById("repr").value = z5;
+	}
 </script>
+	源字符串：<input type="text" id="origin" value="hello"><br>
+	查询：<input type="text" id="find" value="l"><br>
+	替换为:<input type="text" id="repto" value="a"><br>
+	替换结果：<input type="text" id="repr" value=""><input type="button" value="替换" onClick="rep()"><br>
+	
 </body>
 </html>
