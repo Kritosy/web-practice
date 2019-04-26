@@ -11,6 +11,7 @@
 			document.write("<br>");
 		}
 		var a1 = new Array();
+		var a2 = new Array(5,4,3,2,1);
 		p("通过 new Array()创建一个空数组:"+a1);
 		a1 = new Array(5);
 		p("通过 new Array(5)创建一个长度是5的数组:"+a1);
@@ -19,6 +20,31 @@
 		p("创建有初值的数组new Array(1,2,3,4,5) :&nbsp;&nbsp;"+a1);
 		p("当前数组是:"+a1);
 		p("数组长度是:"+a1.length);
+		p("a1数组："+a1);
+		p("a2数组："+a2);
+		p("遍历数组a1:");
+		for(i=0;i<a1.length;i++){
+			p(a1[i]);
+		}
+		p("增强for循环遍历数组a2：");
+		for(i in a2){
+			p(a2[i]);
+		}
+		p("连接两个数组a1和a2");
+		p(a1.concat(a2));
+		a1.push(8);
+		p("利用push和pop在最后的位置插入数据(push)"+a1+"&nbsp;&nbsp;获取数据(pop)(获取后删除)&nbsp;"+a1.pop()+"&nbsp;获取后的数组"+a1);
+		a2.unshift(11);
+		p("利用unshift和shift在最前的位置插入数据(unshift)"+a2+"&nbsp;&nbsp;获取数据(shift)(获取后删除)&nbsp;"+a2.shift()+"&nbsp;获取后的数组"+a2);
+		p("利用sort函数对a2排序："+ a2.sort());
+		p("利用revers函数a1反转："+ a1.reverse());
+		p("利用slice函数获取子列(注意左闭右开)："+a1.slice(0,3));
+		var a3 = new Array(2,4,2,1,5);
+		p("数组a3："+ a3);
+		a3.splice(3,1);
+		p("a3.splice (3,1) 表示从位置3开始 ，删除1个元素:"+a3);
+		a3.splice(1,0,2,3)
+		p("a3.splice(1,0,2,3)表示从位置1开始，删除0个元素，再添加2和3:&nbsp;&nbsp;"+a3);
 	</script>
 </body>
 </html>
