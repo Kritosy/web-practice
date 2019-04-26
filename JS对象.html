@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>JS对象</title>
 </head>
-<script>//数字对象
+<script>//数字对象 new Number()
 	var x1 = new Number(123);
 	var x2 = 123;
 	document.write("x1的类型是："+ typeof x1);
@@ -32,7 +32,7 @@
 </script><br>
 <body>
 	<input id="num1" type="number" value="1"> X <input id="num2" type="number" value="2"> = <input id="num3" type="number" value=""><input type="button" value="计算" onClick="get()"><br>
-	<script>//字符串对象
+	<script>//字符串对象 ->new String()
 		var x5 = "5";
 		var x6 = new String(x5);
 		var x7 = new String("Hello JS");
@@ -41,6 +41,30 @@
 		document.write(typeof x6);
 		document.write("<br>")
 		document.write(x7.length);
+</script>
+<br>
+<script>//返回指定位置的字符  ->charAt() ->charCodeAt ()
+ 	var x8 = new String("Hello JavaScrpt");
+	document.write("字符串y的值:"+x8);
+	document.write("<br>"); 
+	document.write('通过 charAt(0)获取位置0的字符串： '+x8.charAt(0)); //返回H
+	document.write("<br>");
+	document.write('通过 charCodeAt(0)获取位置0的字符的 Unicode码 ：'+x8.charCodeAt(1)); //返回H对应的Unicode码 72
+</script>
+<br>
+<script>//字符串拼接 ->concat()
+	var x9 = new String("Hello");
+	var x0 = new String(" World!");
+	document.write(x9.concat(x0));
+</script>
+<br>
+<script>//子字符串出现的位置
+	var y1 = new String("Hello Javascript");
+	document.write("字符串y1的值："+ y1);
+	document.write("<br>");
+	document.write('通过indexOf（"a"）获取子字符"a"第一次出现的位置'+ y1.indexOf("a"));
+	document.write("<br>");
+	document.write('通过indexOf ("a")获取子字符"a" 第一次出现的位置 '+y1.indexOf ("a"));
 </script>
 </body>
 </html>
